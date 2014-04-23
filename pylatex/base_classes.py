@@ -43,6 +43,9 @@ class BaseLaTeXClass(object):
         """Preform inplace add of new container, return the new container."""
         self.append(other)
         return other
+        
+    def __str__(self):
+        return self.dump()
 
 
 class BaseLaTeXContainer(BaseLaTeXClass, list):
